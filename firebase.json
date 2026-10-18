@@ -1,0 +1,34 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "hiicampus-habit-tracker",
+          "appId": "1:228780551531:android:247dee957409c49712f02e",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "hiicampus-habit-tracker",
+          "appId": "1:228780551531:ios:53a169f962b42e0312f02e",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "hiicampus-habit-tracker",
+          "configurations": {
+            "android": "1:228780551531:android:247dee957409c49712f02e",
+            "ios": "1:228780551531:ios:53a169f962b42e0312f02e"
+          }
+        }
+      }
+    }
+  }
+}

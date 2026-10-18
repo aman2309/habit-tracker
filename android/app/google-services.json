@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "228780551531",
+    "project_id": "hiicampus-habit-tracker",
+    "storage_bucket": "hiicampus-habit-tracker.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228780551531:android:247dee957409c49712f02e",
+        "android_client_info": {
+          "package_name": "com.hiicampus.hiicampus_habit_tracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAG3w6EJLlUJqYVW2c5kQ21oRh6ewPWjuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

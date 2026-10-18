@@ -1,0 +1,29 @@
+rules_version = '2';
+
+// =============================================================================
+// DEVELOPMENT ONLY - NOT PRODUCTION SAFE.
+//
+// Firebase Authentication is NOT configured for this project, so these rules
+// cannot identify a real caller. They deliberately expose ONLY the single,
+// documented development namespace `users/dev-user/**` (see
+// lib/core/config/dev_identity.dart) and deny every other path.
+//
+// This is a testing-only posture for a development project:
+//   * anyone who has the (public) API key can read/write `dev-user` data,
+//   * it provides NO user isolation,
+//   * it must be replaced with `request.auth.uid == userId` rules (and real
+//     authentication) before storing anything that matters.
+// =============================================================================
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/dev-user/{document=**} {
+      allow read, write: if true;
+    }
+
+    // Everything else stays locked.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
